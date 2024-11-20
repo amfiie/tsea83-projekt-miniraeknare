@@ -1,0 +1,40 @@
+.DS_Store_Store
+src/transcript
+src/work/_info
+src/work/_lib.qdb
+src/work/_lib1_0.qdb
+src/work/_lib1_0.qpg
+src/work/_lib1_0.qtl
+src/work/_vmake
+*-simdir/transcript
+*-simdir/vsim.wlf
+# *-simdir/work/_lib.qdb
+# *-simdir/work/_lib1_15.qdb
+# *-simdir/work/_lib1_15.qpg
+# *-simdir/work/_lib1_15.qtl
+# *-simdir/work/_vmake
+# *-simdir/work/@_opt/_lib.qdb
+# *-simdir/work/@_opt/_lib1_0.qdb
+# *-simdir/work/@_opt/_lib1_0.qpg
+# *-simdir/work/@_opt/_lib1_0.qtl
+# *-simdir/work/@_opt/_lib2_0.qdb
+# *-simdir/work/@_opt/_lib2_0.qpg
+# *-simdir/work/@_opt/_lib2_0.qtl
+# *-simdir/work/@_opt/_lib3_0.qdb
+# *-simdir/work/@_opt/_lib3_0.qpg
+# *-simdir/work/@_opt/_lib3_0.qtl
+# *-simdir/work/@_opt/_lib4_0.qdb
+# *-simdir/work/@_opt/_lib4_0.qpg
+# *-simdir/work/@_opt/_lib4_0.qtl
+# *-simdir/work/@_opt/_lib5_0.qdb
+# *-simdir/work/@_opt/_lib5_0.qpg
+# *-simdir/work/@_opt/_lib5_0.qtl
+# *-simdir/work/@_opt/_lib6_0.qdb
+# *-simdir/work/@_opt/_lib6_0.qpg
+# *-simdir/work/@_opt/_lib6_0.qtl
+# *-simdir/work/@_opt/_lib7_0.qdb
+# *-simdir/work/@_opt/_lib7_0.qpg
+# *-simdir/work/@_opt/_lib7_0.qtl
+*-simdir/work/*
+
+work/*

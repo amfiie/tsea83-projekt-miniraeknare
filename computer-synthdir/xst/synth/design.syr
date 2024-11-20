@@ -1,0 +1,1015 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to tmpdir
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "design.prj"
+
+---- Target Parameters
+Output File Name                   : "design.ngc"
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : computer
+
+=========================================================================
+
+WARNING:Xst:29 - Optimization Effort not specified
+The following parameters have been added:
+Optimization Goal                  : SPEED
+
+=========================================================================
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/computer.vhd" into library work
+Parsing entity <computer>.
+Parsing architecture <func> of entity <computer>.
+Parsing VHDL file "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/pipeline.vhd" into library work
+Parsing entity <CPU>.
+Parsing architecture <func> of entity <cpu>.
+Parsing VHDL file "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/pm.vhd" into library work
+Parsing entity <PM>.
+Parsing architecture <func> of entity <pm>.
+Parsing VHDL file "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/alu.vhd" into library work
+Parsing entity <ALU>.
+Parsing architecture <func> of entity <alu>.
+Parsing VHDL file "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/dm.vhd" into library work
+Parsing entity <DM>.
+Parsing architecture <func> of entity <dm>.
+Parsing VHDL file "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/addr_dec.vhd" into library work
+Parsing entity <ADDR_DEC>.
+Parsing architecture <func> of entity <addr_dec>.
+Parsing VHDL file "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/register_file.vhd" into library work
+Parsing entity <register_file>.
+Parsing architecture <func> of entity <register_file>.
+Parsing VHDL file "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/kbd_enc.vhd" into library work
+Parsing entity <KBD_ENC>.
+Parsing architecture <behavioral> of entity <kbd_enc>.
+Parsing VHDL file "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/VGA_motor.vhd" into library work
+Parsing entity <VGA_motor>.
+Parsing architecture <func> of entity <vga_motor>.
+Parsing VHDL file "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/pict_mem.vhd" into library work
+Parsing entity <PICT_MEM>.
+Parsing architecture <func> of entity <pict_mem>.
+Parsing VHDL file "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/tile_mem.vhd" into library work
+Parsing entity <tile_mem>.
+Parsing architecture <func> of entity <tile_mem>.
+Parsing VHDL file "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/bootloader.vhd" into library work
+Parsing entity <bootloader>.
+Parsing architecture <func> of entity <bootloader>.
+Parsing VHDL file "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/bootloader_uart.vhd" into library work
+Parsing entity <bootloader_uart>.
+Parsing architecture <func> of entity <bootloader_uart>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <computer> (architecture <func>) from library <work>.
+
+Elaborating entity <CPU> (architecture <func>) from library <work>.
+
+Elaborating entity <PM> (architecture <func>) from library <work>.
+
+Elaborating entity <ALU> (architecture <func>) from library <work>.
+WARNING:HDLCompiler:92 - "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/alu.vhd" Line 63: c should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/alu.vhd" Line 68: c should be on the sensitivity list of the process
+
+Elaborating entity <register_file> (architecture <func>) from library <work>.
+
+Elaborating entity <KBD_ENC> (architecture <behavioral>) from library <work>.
+
+Elaborating entity <bootloader> (architecture <func>) from library <work>.
+
+Elaborating entity <bootloader_uart> (architecture <func>) from library <work>.
+WARNING:HDLCompiler:92 - "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/bootloader_uart.vhd" Line 33: rst should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/bootloader_uart.vhd" Line 53: rst should be on the sensitivity list of the process
+INFO:HDLCompiler:679 - "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/bootloader.vhd" Line 84. Case statement is complete. others clause is never selected
+
+Elaborating entity <ADDR_DEC> (architecture <func>) from library <work>.
+
+Elaborating entity <DM> (architecture <func>) from library <work>.
+
+Elaborating entity <VGA_motor> (architecture <func>) from library <work>.
+
+Elaborating entity <PICT_MEM> (architecture <func>) from library <work>.
+
+Elaborating entity <tile_mem> (architecture <func>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <computer>.
+    Related source file is "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/computer.vhd".
+    Found 16-bit register for signal <IOR>.
+    Found 16-bit register for signal <Z3>.
+    Found 4x32-bit Read Only RAM for signal <_n0043>
+    Found 16-bit 4-to-1 multiplexer for signal <_n0046> created at line 33.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <computer> synthesized.
+
+Synthesizing Unit <CPU>.
+    Related source file is "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/pipeline.vhd".
+    Found 11-bit register for signal <PC1>.
+    Found 16-bit register for signal <IR1>.
+    Found 16-bit register for signal <IR2>.
+    Found 16-bit register for signal <IR3>.
+    Found 9-bit register for signal <IR4<15:7>>.
+    Found 16-bit register for signal <X_REG>.
+    Found 16-bit register for signal <Y_REG>.
+    Found 11-bit register for signal <stack_ptr>.
+    Found 1-bit register for signal <k_flag>.
+    Found 1-bit register for signal <halted>.
+    Found 16-bit register for signal <D4>.
+    Found 16-bit register for signal <D3>.
+    Found 11-bit register for signal <PC0>.
+    Found 11-bit adder for signal <PC0[10]_GND_5_o_add_11_OUT> created at line 1241.
+    Found 11-bit adder for signal <stack_ptr[10]_GND_5_o_add_29_OUT> created at line 1241.
+    Found 11-bit adder for signal <PC1[10]_GND_5_o_add_33_OUT> created at line 1241.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_32_OUT<10:0>> created at line 1308.
+    Found 4-bit comparator equal for signal <IR3[10]_IR2[10]_equal_72_o> created at line 354
+    Found 4-bit comparator equal for signal <IR4[10]_IR2[10]_equal_83_o> created at line 356
+    Found 4-bit comparator equal for signal <IR3[10]_IR2[6]_equal_97_o> created at line 362
+    Found 4-bit comparator equal for signal <IR4[10]_IR2[6]_equal_108_o> created at line 364
+    Found 4-bit comparator equal for signal <IR2[10]_IR1[10]_equal_131_o> created at line 384
+    Found 4-bit comparator equal for signal <IR2[10]_IR1[6]_equal_136_o> created at line 384
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred 156 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred  23 Multiplexer(s).
+Unit <CPU> synthesized.
+
+Synthesizing Unit <PM>.
+    Related source file is "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/pm.vhd".
+    Found 2048x16-bit dual-port RAM <Mram_pm_data> for signal <pm_data>.
+    Found 16-bit register for signal <pm_out>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  16 D-type flip-flop(s).
+Unit <PM> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/alu.vhd".
+WARNING:Xst:647 - Input <instr<10:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <N>.
+    Found 1-bit register for signal <C>.
+    Found 1-bit register for signal <O>.
+    Found 1-bit register for signal <Z>.
+    Found 17-bit adder for signal <GND_7_o_GND_7_o_add_1_OUT> created at line 63.
+    Found 17-bit adder for signal <n0095> created at line 64.
+    Found 17-bit subtractor for signal <GND_7_o_GND_7_o_sub_5_OUT<16:0>> created at line 66.
+    Found 17-bit subtractor for signal <GND_7_o_GND_7_o_sub_7_OUT<16:0>> created at line 68.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+	inferred  21 Multiplexer(s).
+Unit <ALU> synthesized.
+
+Synthesizing Unit <register_file>.
+    Related source file is "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/register_file.vhd".
+    Found 16-bit register for signal <R1>.
+    Found 16-bit register for signal <R2>.
+    Found 16-bit register for signal <R3>.
+    Found 16-bit register for signal <R4>.
+    Found 16-bit register for signal <R5>.
+    Found 16-bit register for signal <R6>.
+    Found 16-bit register for signal <R7>.
+    Found 16-bit register for signal <R8>.
+    Found 16-bit register for signal <R9>.
+    Found 16-bit register for signal <R10>.
+    Found 16-bit register for signal <R11>.
+    Found 16-bit register for signal <R12>.
+    Found 16-bit register for signal <R13>.
+    Found 16-bit register for signal <R14>.
+    Found 16-bit register for signal <R15>.
+    Found 16-bit register for signal <R0>.
+    Found 16-bit 16-to-1 multiplexer for signal <data_x> created at line 23.
+    Found 16-bit 16-to-1 multiplexer for signal <data_y> created at line 23.
+    Found 4-bit comparator equal for signal <addr_x[3]_addr_w[3]_equal_108_o> created at line 90
+    Found 4-bit comparator equal for signal <addr_y[3]_addr_w[3]_equal_110_o> created at line 93
+    Summary:
+	inferred 256 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <register_file> synthesized.
+
+Synthesizing Unit <KBD_ENC>.
+    Related source file is "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/kbd_enc.vhd".
+    Found 1-bit register for signal <PS2Data>.
+    Found 1-bit register for signal <PS2Clk_Q1>.
+    Found 1-bit register for signal <PS2Clk_Q2>.
+    Found 11-bit register for signal <PS2Data_sr>.
+    Found 4-bit register for signal <PS2BitCounter>.
+    Found 1-bit register for signal <shift_flag>.
+    Found 3-bit register for signal <PS2state>.
+    Found 1-bit register for signal <done_flag>.
+    Found 1-bit register for signal <PS2Clk>.
+    Found finite state machine <FSM_0> for signal <PS2state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 19                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit adder for signal <PS2BitCounter[3]_GND_9_o_add_4_OUT> created at line 1241.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
+Unit <KBD_ENC> synthesized.
+
+Synthesizing Unit <bootloader>.
+    Related source file is "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/bootloader.vhd".
+    Found 2-bit register for signal <bitCount>.
+    Found 1-bit register for signal <we>.
+    Found 11-bit register for signal <pm_addr>.
+    Found 11-bit register for signal <pm_addr_signal>.
+    Found 16-bit register for signal <instr>.
+    Found 1-bit register for signal <booting>.
+    Found finite state machine <FSM_1> for signal <bitCount>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 11-bit adder for signal <pm_addr_signal[10]_GND_10_o_add_4_OUT> created at line 1241.
+    Found 16-bit 4-to-1 multiplexer for signal <bitCount[1]_instr[15]_wide_mux_5_OUT> created at line 78.
+WARNING:Xst:737 - Found 1-bit latch for signal <hex_sign<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <hex_sign<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <hex_sign<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <hex_sign<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 8-bit comparator lessequal for signal <n0000> created at line 75
+    Found 8-bit comparator lessequal for signal <n0002> created at line 75
+    Found 8-bit comparator lessequal for signal <n0005> created at line 76
+    Found 8-bit comparator lessequal for signal <n0007> created at line 76
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  40 D-type flip-flop(s).
+	inferred   4 Latch(s).
+	inferred   4 Comparator(s).
+	inferred  13 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <bootloader> synthesized.
+
+Synthesizing Unit <bootloader_uart>.
+    Related source file is "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/bootloader_uart.vhd".
+    Found 10-bit register for signal <sp_clock>.
+    Found 4-bit register for signal <lp_count>.
+    Found 1-bit register for signal <rx2>.
+    Found 1-bit register for signal <isInput>.
+    Found 1-bit register for signal <rx1>.
+    Found 10-bit register for signal <sreg>.
+    Found 10-bit adder for signal <sp_clock[9]_GND_11_o_add_2_OUT> created at line 1241.
+    Found 4-bit adder for signal <lp_count[3]_GND_11_o_add_6_OUT> created at line 1241.
+WARNING:Xst:737 - Found 1-bit latch for signal <out_data<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <out_data<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <out_data<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <out_data<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <out_data<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <out_data<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <out_data<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <out_data<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   8 Latch(s).
+	inferred   5 Multiplexer(s).
+Unit <bootloader_uart> synthesized.
+
+Synthesizing Unit <ADDR_DEC>.
+    Related source file is "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/addr_dec.vhd".
+WARNING:Xst:647 - Input <full_out_addr<10:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <ADDR_DEC> synthesized.
+
+Synthesizing Unit <DM>.
+    Related source file is "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/dm.vhd".
+    Found 2048x16-bit single-port RAM <Mram_dm> for signal <dm>.
+    Found 16-bit register for signal <data_out>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  16 D-type flip-flop(s).
+Unit <DM> synthesized.
+
+Synthesizing Unit <VGA_motor>.
+    Related source file is "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/VGA_motor.vhd".
+WARNING:Xst:647 - Input <ior<15:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 10-bit register for signal <Xpixel>.
+    Found 10-bit register for signal <Xpipe1>.
+    Found 10-bit register for signal <Xpipe2>.
+    Found 10-bit register for signal <Ypipe1>.
+    Found 10-bit register for signal <Ypipe2>.
+    Found 1-bit register for signal <blank1>.
+    Found 1-bit register for signal <blank2>.
+    Found 10-bit register for signal <Ypixel>.
+    Found 2-bit register for signal <ClkDiv>.
+    Found 2-bit adder for signal <ClkDiv[1]_GND_26_o_add_0_OUT> created at line 1241.
+    Found 10-bit adder for signal <Xpixel[9]_GND_26_o_add_5_OUT> created at line 1241.
+    Found 10-bit adder for signal <Ypixel[9]_GND_26_o_add_22_OUT> created at line 1241.
+    Found 4-bit adder for signal <Ypixel[8]_ior[3]_add_32_OUT> created at line 136.
+    Found 11-bit adder for signal <tile_addr> created at line 136.
+    Found 5x4-bit multiplier for signal <PWR_16_o_Ypixel[8]_MuLt_33_OUT> created at line 136.
+    Found 10-bit comparator lessequal for signal <n0022> created at line 100
+    Found 10-bit comparator greater for signal <Xpipe2[9]_PWR_16_o_LessThan_20_o> created at line 100
+    Found 10-bit comparator lessequal for signal <n0033> created at line 123
+    Found 10-bit comparator greater for signal <Ypipe2[9]_GND_26_o_LessThan_29_o> created at line 123
+    Found 10-bit comparator lessequal for signal <n0038> created at line 130
+    Found 10-bit comparator lessequal for signal <n0040> created at line 130
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred  64 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <VGA_motor> synthesized.
+
+Synthesizing Unit <PICT_MEM>.
+    Related source file is "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/pict_mem.vhd".
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <pict_mem>, simulation mismatch.
+    Found 320x5-bit dual-port RAM <Mram_pict_mem> for signal <pict_mem>.
+    Found 5-bit register for signal <data_out_VGA>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   5 D-type flip-flop(s).
+Unit <PICT_MEM> synthesized.
+
+Synthesizing Unit <tile_mem>.
+    Related source file is "/home/axeha009/TSEA83/tsea83-projekt-miniraeknare/src/tile_mem.vhd".
+WARNING:Xst:2999 - Signal 'tile_memory', unconnected in block 'tile_mem', is tied to its initial value.
+WARNING:Xst:2999 - Signal 'pallet', unconnected in block 'tile_mem', is tied to its initial value.
+    Found 2048x3-bit single-port Read Only RAM <Mram_tile_memory> for signal <tile_memory>.
+    Found 8x8-bit single-port Read Only RAM <Mram_pallet> for signal <pallet>.
+    Found 3-bit register for signal <color_code>.
+    Found 6-bit adder for signal <xy_index> created at line 330.
+    Summary:
+	inferred   2 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 D-type flip-flop(s).
+Unit <tile_mem> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 6
+ 2048x16-bit dual-port RAM                             : 1
+ 2048x16-bit single-port RAM                           : 1
+ 2048x3-bit single-port Read Only RAM                  : 1
+ 320x5-bit dual-port RAM                               : 1
+ 4x32-bit single-port Read Only RAM                    : 1
+ 8x8-bit single-port Read Only RAM                     : 1
+# Multipliers                                          : 1
+ 5x4-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 18
+ 10-bit adder                                          : 3
+ 11-bit adder                                          : 5
+ 11-bit addsub                                         : 1
+ 17-bit adder                                          : 2
+ 17-bit subtractor                                     : 2
+ 2-bit adder                                           : 1
+ 4-bit adder                                           : 3
+ 6-bit adder                                           : 1
+# Registers                                            : 67
+ 1-bit register                                        : 19
+ 10-bit register                                       : 8
+ 11-bit register                                       : 6
+ 16-bit register                                       : 28
+ 2-bit register                                        : 1
+ 3-bit register                                        : 1
+ 4-bit register                                        : 2
+ 5-bit register                                        : 1
+ 9-bit register                                        : 1
+# Latches                                              : 12
+ 1-bit latch                                           : 12
+# Comparators                                          : 18
+ 10-bit comparator greater                             : 2
+ 10-bit comparator lessequal                           : 4
+ 4-bit comparator equal                                : 8
+ 8-bit comparator lessequal                            : 4
+# Multiplexers                                         : 73
+ 1-bit 2-to-1 multiplexer                              : 18
+ 10-bit 2-to-1 multiplexer                             : 5
+ 11-bit 2-to-1 multiplexer                             : 4
+ 16-bit 16-to-1 multiplexer                            : 2
+ 16-bit 2-to-1 multiplexer                             : 15
+ 16-bit 4-to-1 multiplexer                             : 2
+ 32-bit 2-to-1 multiplexer                             : 22
+ 4-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2404 -  FFs/Latches <R15<15:8>> (without init value) have a constant value of 0 in block <register_file>.
+
+Synthesizing (advanced) Unit <CPU>.
+The following registers are absorbed into counter <stack_ptr>: 1 register on signal <stack_ptr>.
+Unit <CPU> synthesized (advanced).
+
+Synthesizing (advanced) Unit <KBD_ENC>.
+The following registers are absorbed into counter <PS2BitCounter>: 1 register on signal <PS2BitCounter>.
+Unit <KBD_ENC> synthesized (advanced).
+
+Synthesizing (advanced) Unit <VGA_motor>.
+The following registers are absorbed into counter <ClkDiv>: 1 register on signal <ClkDiv>.
+The following registers are absorbed into counter <Xpixel>: 1 register on signal <Xpixel>.
+The following registers are absorbed into counter <Ypixel>: 1 register on signal <Ypixel>.
+	Multiplier <Mmult_PWR_16_o_Ypixel[8]_MuLt_33_OUT> in block <VGA_motor> and adder/subtractor <Madd_tile_addr_Madd> in block <VGA_motor> are combined into a MAC<Maddsub_PWR_16_o_Ypixel[8]_MuLt_33_OUT>.
+Unit <VGA_motor> synthesized (advanced).
+
+Synthesizing (advanced) Unit <bootloader>.
+The following registers are absorbed into counter <pm_addr_signal>: 1 register on signal <pm_addr_signal>.
+Unit <bootloader> synthesized (advanced).
+
+Synthesizing (advanced) Unit <computer>.
+INFO:Xst:3231 - The small RAM <Mram__n0043> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 32-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <mem_in_select<1:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <DM_map/Mram_dm> will be implemented as a BLOCK RAM, absorbing the following register(s): <DM_map/data_out>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2048-word x 16-bit                  |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <we_vector<0>>  | high     |
+    |     addrA          | connected to signal <mem_addr_3<10:0>> |          |
+    |     diA            | connected to signal <Z3>            |          |
+    |     doA            | connected to signal <dm_data_out>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <PICT_MEM_map/Mram_pict_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <PICT_MEM_map/data_out_VGA>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 320-word x 5-bit                    |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <we_vector<1>>  | high     |
+    |     addrA          | connected to signal <mem_addr_3<8:0>> |          |
+    |     diA            | connected to signal <Z3<4:0>>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 320-word x 5-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <pict_addr>     |          |
+    |     doB            | connected to signal <pict_data_out> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <CPU_map/bootloader_map/pm_addr> prevents it from being combined with the RAM <CPU_map/PM_map/Mram_pm_data> for implementation as read-only block RAM.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2048-word x 16-bit                  |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <CPU_map/booting_we> | high     |
+    |     addrA          | connected to signal <CPU_map/booting_pm_addr> |          |
+    |     diA            | connected to signal <CPU_map/booting_instr> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 2048-word x 16-bit                  |          |
+    |     addrB          | connected to signal <CPU_map/PC>    |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <CPU_map/PM_map/Mram_pm_data> will be implemented as a BLOCK RAM, absorbing the following register(s): <CPU_map/PM_map/pm_out>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2048-word x 16-bit                  |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <CPU_map/booting_we> | high     |
+    |     addrA          | connected to signal <CPU_map/booting_pm_addr> |          |
+    |     diA            | connected to signal <CPU_map/booting_instr> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 2048-word x 16-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <CPU_map/PC>    |          |
+    |     doB            | connected to signal <CPU_map/IR0>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <computer> synthesized (advanced).
+
+Synthesizing (advanced) Unit <tile_mem>.
+INFO:Xst:3231 - The small RAM <Mram_pallet> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <color_code>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_tile_memory> will be implemented as a BLOCK RAM, absorbing the following register(s): <color_code>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2048-word x 3-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(addr,xy_index)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <color_code>    |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <tile_mem> synthesized (advanced).
+WARNING:Xst:2677 - Node <PS2Data_sr_0> of sequential type is unconnected in block <KBD_ENC>.
+WARNING:Xst:2677 - Node <sreg_0> of sequential type is unconnected in block <bootloader_uart>.
+WARNING:Xst:2677 - Node <CPU_map/IR3_0> of sequential type is unconnected in block <computer>.
+WARNING:Xst:2677 - Node <CPU_map/IR3_1> of sequential type is unconnected in block <computer>.
+WARNING:Xst:2677 - Node <CPU_map/IR3_2> of sequential type is unconnected in block <computer>.
+WARNING:Xst:2677 - Node <CPU_map/IR3_3> of sequential type is unconnected in block <computer>.
+WARNING:Xst:2677 - Node <CPU_map/IR3_4> of sequential type is unconnected in block <computer>.
+WARNING:Xst:2677 - Node <CPU_map/IR3_5> of sequential type is unconnected in block <computer>.
+WARNING:Xst:2677 - Node <CPU_map/IR3_6> of sequential type is unconnected in block <computer>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 6
+ 2048x16-bit dual-port block RAM                       : 1
+ 2048x16-bit single-port block RAM                     : 1
+ 2048x3-bit single-port block Read Only RAM            : 1
+ 320x5-bit dual-port block RAM                         : 1
+ 4x32-bit single-port distributed Read Only RAM        : 1
+ 8x8-bit single-port distributed Read Only RAM         : 1
+# MACs                                                 : 1
+ 5x4-to-9-bit MAC                                      : 1
+# Adders/Subtractors                                   : 11
+ 10-bit adder                                          : 1
+ 11-bit adder                                          : 3
+ 17-bit adder                                          : 2
+ 17-bit subtractor                                     : 2
+ 4-bit adder                                           : 2
+ 6-bit adder                                           : 1
+# Counters                                             : 6
+ 10-bit up counter                                     : 2
+ 11-bit up counter                                     : 1
+ 11-bit updown counter                                 : 1
+ 2-bit up counter                                      : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 535
+ Flip-Flops                                            : 535
+# Comparators                                          : 18
+ 10-bit comparator greater                             : 2
+ 10-bit comparator lessequal                           : 4
+ 4-bit comparator equal                                : 8
+ 8-bit comparator lessequal                            : 4
+# Multiplexers                                         : 145
+ 1-bit 16-to-1 multiplexer                             : 32
+ 1-bit 2-to-1 multiplexer                              : 65
+ 10-bit 2-to-1 multiplexer                             : 3
+ 11-bit 2-to-1 multiplexer                             : 4
+ 16-bit 2-to-1 multiplexer                             : 12
+ 16-bit 4-to-1 multiplexer                             : 2
+ 32-bit 2-to-1 multiplexer                             : 22
+ 4-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_1> on signal <bitCount[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+ 11    | 11
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <CPU_map/KBD_ENC_map/FSM_0> on signal <PS2state[1:3]> with user encoding.
+-------------------------
+ State       | Encoding
+-------------------------
+ idle        | 000
+ make        | 001
+ break       | 010
+ shift       | 011
+ shift_make  | 100
+ shift_break | 101
+-------------------------
+WARNING:Xst:2677 - Node <Xpipe1_0> of sequential type is unconnected in block <VGA_motor>.
+WARNING:Xst:2677 - Node <Xpipe1_1> of sequential type is unconnected in block <VGA_motor>.
+WARNING:Xst:2677 - Node <Ypipe1_0> of sequential type is unconnected in block <VGA_motor>.
+WARNING:Xst:2677 - Node <Xpipe2_0> of sequential type is unconnected in block <VGA_motor>.
+WARNING:Xst:2677 - Node <Xpipe2_1> of sequential type is unconnected in block <VGA_motor>.
+WARNING:Xst:2677 - Node <Xpipe2_2> of sequential type is unconnected in block <VGA_motor>.
+WARNING:Xst:2677 - Node <Xpipe2_3> of sequential type is unconnected in block <VGA_motor>.
+WARNING:Xst:2677 - Node <Ypipe2_0> of sequential type is unconnected in block <VGA_motor>.
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    CPU_map/bootloader_map/hex_sign_2 in unit <computer>
+    CPU_map/bootloader_map/hex_sign_1 in unit <computer>
+    CPU_map/bootloader_map/hex_sign_0 in unit <computer>
+    CPU_map/bootloader_map/hex_sign_3 in unit <computer>
+
+
+Optimizing unit <computer> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <register_file> ...
+
+Optimizing unit <KBD_ENC> ...
+
+Optimizing unit <bootloader_uart> ...
+
+Optimizing unit <VGA_motor> ...
+WARNING:Xst:1710 - FF/Latch <CPU_map/Register_map/R15_7> (without init value) has a constant value of 0 in block <computer>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <CPU_map/D3_15> in Unit <computer> is equivalent to the following FF/Latch, which will be removed : <CPU_map/ALU_map/N> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block computer, actual ratio is 13.
+FlipFlop CPU_map/IR2_14 has been replicated 1 time(s)
+FlipFlop CPU_map/IR2_15 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 580
+ Flip-Flops                                            : 580
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : design.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1195
+#      GND                         : 1
+#      INV                         : 20
+#      LUT1                        : 31
+#      LUT2                        : 21
+#      LUT3                        : 108
+#      LUT4                        : 98
+#      LUT5                        : 96
+#      LUT6                        : 490
+#      MUXCY                       : 106
+#      MUXF7                       : 78
+#      MUXF8                       : 32
+#      VCC                         : 1
+#      XORCY                       : 113
+# FlipFlops/Latches                : 592
+#      FD                          : 2
+#      FDC                         : 3
+#      FDCE                        : 14
+#      FDE                         : 247
+#      FDR                         : 189
+#      FDRE                        : 113
+#      FDS                         : 1
+#      FDSE                        : 11
+#      LD                          : 12
+# RAMS                             : 6
+#      RAMB16BWER                  : 4
+#      RAMB8BWER                   : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 4
+#      OBUF                        : 10
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             592  out of  18224     3%  
+ Number of Slice LUTs:                  864  out of   9112     9%  
+    Number used as Logic:               864  out of   9112     9%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1086
+   Number with an unused Flip Flop:     494  out of   1086    45%  
+   Number with an unused LUT:           222  out of   1086    20%  
+   Number of fully used LUT-FF pairs:   370  out of   1086    34%  
+   Number of unique control sets:        36
+
+IO Utilization: 
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    232     6%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                5  out of     32    15%  
+    Number using Block RAM only:          5
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+-------+
+Clock Signal                                                                                                               | Clock buffer(FF name)                                         | Load  |
+---------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+-------+
+clk                                                                                                                        | BUFGP                                                         | 586   |
+CPU_map/bootloader_map/lp(CPU_map/bootloader_map/bootloader_uart_map/_n0081_inv11:O)                                       | NONE(*)(CPU_map/bootloader_map/bootloader_uart_map/out_data_0)| 8     |
+CPU_map/bootloader_map/hex_sign_3_G(CPU_map/bootloader_map/hex_sign_3_G:O)                                                 | NONE(*)(CPU_map/bootloader_map/hex_sign_3)                    | 1     |
+CPU_map/bootloader_map/ascii_sign[7]_ascii_sign[7]_OR_221_o(CPU_map/bootloader_map/ascii_sign[7]_ascii_sign[7]_OR_221_o2:O)| NONE(*)(CPU_map/bootloader_map/hex_sign_0)                    | 3     |
+---------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 11.294ns (Maximum Frequency: 88.544MHz)
+   Minimum input arrival time before clock: 6.103ns
+   Maximum output required time after clock: 6.044ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 11.294ns (frequency: 88.544MHz)
+  Total number of paths / destination ports: 1778265 / 1128
+-------------------------------------------------------------------------
+Delay:               11.294ns (Levels of Logic = 19)
+  Source:            CPU_map/IR3_14 (FF)
+  Destination:       CPU_map/ALU_map/Z (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: CPU_map/IR3_14 to CPU_map/ALU_map/Z
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.447   1.028  CPU_map/IR3_14 (CPU_map/IR3_14)
+     LUT5:I0->O            5   0.203   0.962  CPU_map/IR3[15]_PWR_5_o_equal_70_o<15>1 (CPU_map/IR3[15]_PWR_5_o_equal_70_o)
+     LUT6:I2->O           13   0.203   1.037  CPU_map/IR3[15]_IR3[15]_OR_293_o3_1 (CPU_map/IR3[15]_IR3[15]_OR_293_o3)
+     LUT4:I2->O            1   0.203   0.684  mux32171_SW1 (N79)
+     LUT6:I4->O           10   0.203   0.857  CPU_map/Mmux_Data_forward_x81 (mem_data_in<1>)
+     LUT6:I5->O            1   0.205   0.000  CPU_map/ALU_map/Madd_n0095_lut<1> (CPU_map/ALU_map/Madd_n0095_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  CPU_map/ALU_map/Madd_n0095_cy<1> (CPU_map/ALU_map/Madd_n0095_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  CPU_map/ALU_map/Madd_n0095_cy<2> (CPU_map/ALU_map/Madd_n0095_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  CPU_map/ALU_map/Madd_n0095_cy<3> (CPU_map/ALU_map/Madd_n0095_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  CPU_map/ALU_map/Madd_n0095_cy<4> (CPU_map/ALU_map/Madd_n0095_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  CPU_map/ALU_map/Madd_n0095_cy<5> (CPU_map/ALU_map/Madd_n0095_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  CPU_map/ALU_map/Madd_n0095_cy<6> (CPU_map/ALU_map/Madd_n0095_cy<6>)
+     XORCY:CI->O           2   0.180   0.617  CPU_map/ALU_map/Madd_n0095_xor<7> (CPU_map/ALU_map/n0095<7>)
+     LUT1:I0->O            1   0.205   0.000  CPU_map/ALU_map/Madd_GND_7_o_GND_7_o_add_1_OUT_cy<7>_rt (CPU_map/ALU_map/Madd_GND_7_o_GND_7_o_add_1_OUT_cy<7>_rt)
+     MUXCY:S->O            1   0.172   0.000  CPU_map/ALU_map/Madd_GND_7_o_GND_7_o_add_1_OUT_cy<7> (CPU_map/ALU_map/Madd_GND_7_o_GND_7_o_add_1_OUT_cy<7>)
+     XORCY:CI->O           1   0.180   0.580  CPU_map/ALU_map/Madd_GND_7_o_GND_7_o_add_1_OUT_xor<8> (CPU_map/ALU_map/GND_7_o_GND_7_o_add_1_OUT<8>)
+     LUT3:I2->O            1   0.205   0.580  CPU_map/ALU_map/Mmux_R627 (CPU_map/ALU_map/Mmux_R626)
+     LUT6:I5->O            2   0.205   0.981  CPU_map/ALU_map/Mmux_R628 (CPU_map/alu_result<8>)
+     LUT6:I0->O            1   0.203   0.580  CPU_map/ALU_map/Zc<31>3 (CPU_map/ALU_map/Zc<31>2)
+     LUT6:I5->O            1   0.205   0.000  CPU_map/ALU_map/Zc<31>4 (CPU_map/ALU_map/Zc)
+     FDR:D                     0.102          CPU_map/ALU_map/Z
+    ----------------------------------------
+    Total                     11.294ns (3.388ns logic, 7.906ns route)
+                                       (30.0% logic, 70.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 367 / 367
+-------------------------------------------------------------------------
+Offset:              6.103ns (Levels of Logic = 3)
+  Source:            rst (PAD)
+  Destination:       CPU_map/PM_map/Mram_pm_data2 (RAM)
+  Destination Clock: clk rising
+
+  Data Path: rst to CPU_map/PM_map/Mram_pm_data2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           319   1.222   2.177  rst_IBUF (rst_IBUF)
+     LUT2:I0->O           13   0.203   1.297  CPU_map/rst_booting_OR_267_o1 (CPU_map/rst_booting_OR_267_o)
+     LUT6:I0->O            3   0.203   0.650  CPU_map/Mmux_PC2 (CPU_map/PC<0>)
+     RAMB16BWER:ADDRB3         0.350          CPU_map/PM_map/Mram_pm_data2
+    ----------------------------------------
+    Total                      6.103ns (1.978ns logic, 4.125ns route)
+                                       (32.4% logic, 67.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 47 / 10
+-------------------------------------------------------------------------
+Offset:              6.044ns (Levels of Logic = 2)
+  Source:            TILE_MEM_map/Mram_tile_memory (RAM)
+  Destination:       vgaRed<1> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: TILE_MEM_map/Mram_tile_memory to vgaRed<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKAWRCLK->DOADO1    7   1.650   1.002  TILE_MEM_map/Mram_tile_memory (TILE_MEM_map/color_code<1>)
+     LUT4:I1->O            2   0.205   0.616  VGAM_map/Mmux_tilePixel31 (vgaGreen_0_OBUF)
+     OBUF:I->O                 2.571          vgaGreen_0_OBUF (vgaGreen<0>)
+    ----------------------------------------
+    Total                      6.044ns (4.426ns logic, 1.618ns route)
+                                       (73.2% logic, 26.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CPU_map/bootloader_map/ascii_sign[7]_ascii_sign[7]_OR_221_o
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+CPU_map/bootloader_map/lp|         |         |    4.490|         |
+-------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CPU_map/bootloader_map/hex_sign_3_G
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+CPU_map/bootloader_map/lp|         |         |    5.520|         |
+-------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CPU_map/bootloader_map/lp
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    1.100|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+-----------------------------------------------------------+---------+---------+---------+---------+
+                                                           | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                               |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------------------------+---------+---------+---------+---------+
+CPU_map/bootloader_map/ascii_sign[7]_ascii_sign[7]_OR_221_o|         |    1.489|         |         |
+CPU_map/bootloader_map/hex_sign_3_G                        |         |    1.489|         |         |
+CPU_map/bootloader_map/lp                                  |         |    5.546|         |         |
+clk                                                        |   11.294|         |         |         |
+-----------------------------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.26 secs
+ 
+--> 
+
+
+Total memory usage is 496428 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   43 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
+

@@ -1,0 +1,334 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri May 13 09:53:24 2022
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "RxD" LOCATE = SITE "N17" LEVEL 1;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "vgaGreen<0>" LOCATE = SITE "P8" LEVEL 1;
+COMP "vgaGreen<1>" LOCATE = SITE "T6" LEVEL 1;
+COMP "vgaGreen<2>" LOCATE = SITE "V6" LEVEL 1;
+COMP "rst" LOCATE = SITE "B8" LEVEL 1;
+COMP "PS2KeyboardCLK" LOCATE = SITE "L12" LEVEL 1;
+COMP "Hsync" LOCATE = SITE "N6" LEVEL 1;
+COMP "Vsync" LOCATE = SITE "P7" LEVEL 1;
+COMP "PS2KeyboardData" LOCATE = SITE "J13" LEVEL 1;
+COMP "vgaRed<0>" LOCATE = SITE "U7" LEVEL 1;
+COMP "vgaRed<1>" LOCATE = SITE "V7" LEVEL 1;
+COMP "vgaRed<2>" LOCATE = SITE "N7" LEVEL 1;
+COMP "vgaBlue<1>" LOCATE = SITE "R7" LEVEL 1;
+COMP "vgaBlue<2>" LOCATE = SITE "T7" LEVEL 1;
+PIN PICT_MEM_map/Mram_pict_mem_pins<20> = BEL "PICT_MEM_map/Mram_pict_mem"
+        PINNAME CLKAWRCLK;
+PIN PICT_MEM_map/Mram_pict_mem_pins<21> = BEL "PICT_MEM_map/Mram_pict_mem"
+        PINNAME CLKBRDCLK;
+PIN DM_map/Mram_dm1_pins<11> = BEL "DM_map/Mram_dm1" PINNAME CLKA;
+PIN DM_map/Mram_dm2_pins<11> = BEL "DM_map/Mram_dm2" PINNAME CLKA;
+PIN CPU_map/PM_map/Mram_pm_data2_pins<22> = BEL "CPU_map/PM_map/Mram_pm_data2"
+        PINNAME CLKA;
+PIN CPU_map/PM_map/Mram_pm_data2_pins<23> = BEL "CPU_map/PM_map/Mram_pm_data2"
+        PINNAME CLKB;
+PIN CPU_map/PM_map/Mram_pm_data1_pins<22> = BEL "CPU_map/PM_map/Mram_pm_data1"
+        PINNAME CLKA;
+PIN CPU_map/PM_map/Mram_pm_data1_pins<23> = BEL "CPU_map/PM_map/Mram_pm_data1"
+        PINNAME CLKB;
+PIN TILE_MEM_map/Mram_tile_memory_pins<11> = BEL
+        "TILE_MEM_map/Mram_tile_memory" PINNAME CLKAWRCLK;
+TIMEGRP sys_clk_pin = BEL "CPU_map/PC0_0" BEL "CPU_map/PC0_1" BEL
+        "CPU_map/PC0_2" BEL "CPU_map/PC0_3" BEL "CPU_map/PC0_4" BEL
+        "CPU_map/PC0_5" BEL "CPU_map/PC0_6" BEL "CPU_map/PC0_7" BEL
+        "CPU_map/PC0_8" BEL "CPU_map/PC0_9" BEL "CPU_map/PC0_10" BEL
+        "CPU_map/D4_0" BEL "CPU_map/D4_1" BEL "CPU_map/D4_2" BEL
+        "CPU_map/D4_3" BEL "CPU_map/D4_4" BEL "CPU_map/D4_5" BEL
+        "CPU_map/D4_6" BEL "CPU_map/D4_7" BEL "CPU_map/D4_8" BEL
+        "CPU_map/D4_9" BEL "CPU_map/D4_10" BEL "CPU_map/D4_11" BEL
+        "CPU_map/D4_12" BEL "CPU_map/D4_13" BEL "CPU_map/D4_14" BEL
+        "CPU_map/D4_15" BEL "CPU_map/IR3_7" BEL "CPU_map/IR3_8" BEL
+        "CPU_map/IR3_9" BEL "CPU_map/IR3_10" BEL "CPU_map/IR3_11" BEL
+        "CPU_map/IR3_12" BEL "CPU_map/IR3_13" BEL "CPU_map/IR3_14" BEL
+        "CPU_map/IR3_15" BEL "CPU_map/IR4_7" BEL "CPU_map/IR4_8" BEL
+        "CPU_map/IR4_9" BEL "CPU_map/IR4_10" BEL "CPU_map/IR4_11" BEL
+        "CPU_map/IR4_12" BEL "CPU_map/IR4_13" BEL "CPU_map/IR4_14" BEL
+        "CPU_map/IR4_15" BEL "CPU_map/PC1_0" BEL "CPU_map/PC1_1" BEL
+        "CPU_map/PC1_2" BEL "CPU_map/PC1_3" BEL "CPU_map/PC1_4" BEL
+        "CPU_map/PC1_5" BEL "CPU_map/PC1_6" BEL "CPU_map/PC1_7" BEL
+        "CPU_map/PC1_8" BEL "CPU_map/PC1_9" BEL "CPU_map/PC1_10" BEL
+        "CPU_map/bootloader_map/pm_addr_0" BEL
+        "CPU_map/bootloader_map/pm_addr_1" BEL
+        "CPU_map/bootloader_map/pm_addr_2" BEL
+        "CPU_map/bootloader_map/pm_addr_3" BEL
+        "CPU_map/bootloader_map/pm_addr_4" BEL
+        "CPU_map/bootloader_map/pm_addr_5" BEL
+        "CPU_map/bootloader_map/pm_addr_6" BEL
+        "CPU_map/bootloader_map/pm_addr_7" BEL
+        "CPU_map/bootloader_map/pm_addr_8" BEL
+        "CPU_map/bootloader_map/pm_addr_9" BEL
+        "CPU_map/bootloader_map/pm_addr_10" BEL
+        "CPU_map/bootloader_map/instr_0" BEL "CPU_map/bootloader_map/instr_1"
+        BEL "CPU_map/bootloader_map/instr_2" BEL
+        "CPU_map/bootloader_map/instr_3" BEL "CPU_map/bootloader_map/instr_4"
+        BEL "CPU_map/bootloader_map/instr_5" BEL
+        "CPU_map/bootloader_map/instr_6" BEL "CPU_map/bootloader_map/instr_7"
+        BEL "CPU_map/bootloader_map/instr_8" BEL
+        "CPU_map/bootloader_map/instr_9" BEL "CPU_map/bootloader_map/instr_10"
+        BEL "CPU_map/bootloader_map/instr_11" BEL
+        "CPU_map/bootloader_map/instr_12" BEL
+        "CPU_map/bootloader_map/instr_13" BEL
+        "CPU_map/bootloader_map/instr_14" BEL
+        "CPU_map/bootloader_map/instr_15" BEL "CPU_map/X_REG_0" BEL
+        "CPU_map/X_REG_1" BEL "CPU_map/X_REG_2" BEL "CPU_map/X_REG_3" BEL
+        "CPU_map/X_REG_4" BEL "CPU_map/X_REG_5" BEL "CPU_map/X_REG_6" BEL
+        "CPU_map/X_REG_7" BEL "CPU_map/X_REG_8" BEL "CPU_map/X_REG_9" BEL
+        "CPU_map/X_REG_10" BEL "CPU_map/X_REG_11" BEL "CPU_map/X_REG_12" BEL
+        "CPU_map/X_REG_13" BEL "CPU_map/X_REG_14" BEL "CPU_map/X_REG_15" BEL
+        "Z3_0" BEL "Z3_1" BEL "Z3_2" BEL "Z3_3" BEL "Z3_4" BEL "Z3_5" BEL
+        "Z3_6" BEL "Z3_7" BEL "Z3_8" BEL "Z3_9" BEL "Z3_10" BEL "Z3_11" BEL
+        "Z3_12" BEL "Z3_13" BEL "Z3_14" BEL "Z3_15" BEL "CPU_map/IR1_0" BEL
+        "CPU_map/IR1_1" BEL "CPU_map/IR1_2" BEL "CPU_map/IR1_3" BEL
+        "CPU_map/IR1_4" BEL "CPU_map/IR1_5" BEL "CPU_map/IR1_6" BEL
+        "CPU_map/IR1_7" BEL "CPU_map/IR1_8" BEL "CPU_map/IR1_9" BEL
+        "CPU_map/IR1_10" BEL "CPU_map/IR1_11" BEL "CPU_map/IR1_12" BEL
+        "CPU_map/IR1_13" BEL "CPU_map/IR1_14" BEL "CPU_map/IR1_15" BEL
+        "CPU_map/IR2_0" BEL "CPU_map/IR2_1" BEL "CPU_map/IR2_2" BEL
+        "CPU_map/IR2_3" BEL "CPU_map/IR2_4" BEL "CPU_map/IR2_5" BEL
+        "CPU_map/IR2_6" BEL "CPU_map/IR2_7" BEL "CPU_map/IR2_8" BEL
+        "CPU_map/IR2_9" BEL "CPU_map/IR2_10" BEL "CPU_map/IR2_11" BEL
+        "CPU_map/IR2_12" BEL "CPU_map/IR2_13" BEL "CPU_map/IR2_14" BEL
+        "CPU_map/IR2_15" BEL "CPU_map/Y_REG_0" BEL "CPU_map/Y_REG_1" BEL
+        "CPU_map/Y_REG_2" BEL "CPU_map/Y_REG_3" BEL "CPU_map/Y_REG_4" BEL
+        "CPU_map/Y_REG_5" BEL "CPU_map/Y_REG_6" BEL "CPU_map/Y_REG_7" BEL
+        "CPU_map/Y_REG_8" BEL "CPU_map/Y_REG_9" BEL "CPU_map/Y_REG_10" BEL
+        "CPU_map/Y_REG_11" BEL "CPU_map/Y_REG_12" BEL "CPU_map/Y_REG_13" BEL
+        "CPU_map/Y_REG_14" BEL "CPU_map/Y_REG_15" BEL "CPU_map/D3_0" BEL
+        "CPU_map/D3_1" BEL "CPU_map/D3_2" BEL "CPU_map/D3_3" BEL
+        "CPU_map/D3_4" BEL "CPU_map/D3_5" BEL "CPU_map/D3_6" BEL
+        "CPU_map/D3_7" BEL "CPU_map/D3_8" BEL "CPU_map/D3_9" BEL
+        "CPU_map/D3_10" BEL "CPU_map/D3_11" BEL "CPU_map/D3_12" BEL
+        "CPU_map/D3_13" BEL "CPU_map/D3_14" BEL "CPU_map/D3_15" BEL "IOR_0"
+        BEL "IOR_1" BEL "IOR_2" BEL "IOR_3" BEL "IOR_4" BEL "IOR_5" BEL
+        "IOR_6" BEL "IOR_7" BEL "IOR_8" BEL "IOR_9" BEL "IOR_10" BEL "IOR_11"
+        BEL "IOR_12" BEL "IOR_13" BEL "IOR_14" BEL "IOR_15" BEL
+        "CPU_map/bootloader_map/bitCount_FSM_FFd1" BEL
+        "CPU_map/bootloader_map/pm_addr_signal_0" BEL
+        "CPU_map/bootloader_map/pm_addr_signal_1" BEL
+        "CPU_map/bootloader_map/pm_addr_signal_2" BEL
+        "CPU_map/bootloader_map/pm_addr_signal_3" BEL
+        "CPU_map/bootloader_map/pm_addr_signal_4" BEL
+        "CPU_map/bootloader_map/pm_addr_signal_5" BEL
+        "CPU_map/bootloader_map/pm_addr_signal_6" BEL
+        "CPU_map/bootloader_map/pm_addr_signal_7" BEL
+        "CPU_map/bootloader_map/pm_addr_signal_8" BEL
+        "CPU_map/bootloader_map/pm_addr_signal_9" BEL
+        "CPU_map/bootloader_map/pm_addr_signal_10" BEL
+        "CPU_map/bootloader_map/bitCount_FSM_FFd2" BEL "CPU_map/stack_ptr_0"
+        BEL "CPU_map/stack_ptr_1" BEL "CPU_map/stack_ptr_2" BEL
+        "CPU_map/stack_ptr_3" BEL "CPU_map/stack_ptr_4" BEL
+        "CPU_map/stack_ptr_5" BEL "CPU_map/stack_ptr_6" BEL
+        "CPU_map/stack_ptr_7" BEL "CPU_map/stack_ptr_8" BEL
+        "CPU_map/stack_ptr_9" BEL "CPU_map/stack_ptr_10" BEL
+        "CPU_map/ALU_map/C" BEL "CPU_map/ALU_map/O" BEL "CPU_map/ALU_map/Z"
+        BEL "CPU_map/Register_map/R15_6" BEL "CPU_map/Register_map/R15_5" BEL
+        "CPU_map/Register_map/R15_4" BEL "CPU_map/Register_map/R15_3" BEL
+        "CPU_map/Register_map/R15_2" BEL "CPU_map/Register_map/R15_1" BEL
+        "CPU_map/Register_map/R15_0" BEL "CPU_map/Register_map/R14_15" BEL
+        "CPU_map/Register_map/R14_14" BEL "CPU_map/Register_map/R14_13" BEL
+        "CPU_map/Register_map/R14_12" BEL "CPU_map/Register_map/R14_11" BEL
+        "CPU_map/Register_map/R14_10" BEL "CPU_map/Register_map/R14_9" BEL
+        "CPU_map/Register_map/R14_8" BEL "CPU_map/Register_map/R14_7" BEL
+        "CPU_map/Register_map/R14_6" BEL "CPU_map/Register_map/R14_5" BEL
+        "CPU_map/Register_map/R14_4" BEL "CPU_map/Register_map/R14_3" BEL
+        "CPU_map/Register_map/R14_2" BEL "CPU_map/Register_map/R14_1" BEL
+        "CPU_map/Register_map/R14_0" BEL "CPU_map/Register_map/R13_15" BEL
+        "CPU_map/Register_map/R13_14" BEL "CPU_map/Register_map/R13_13" BEL
+        "CPU_map/Register_map/R13_12" BEL "CPU_map/Register_map/R13_11" BEL
+        "CPU_map/Register_map/R13_10" BEL "CPU_map/Register_map/R13_9" BEL
+        "CPU_map/Register_map/R13_8" BEL "CPU_map/Register_map/R13_7" BEL
+        "CPU_map/Register_map/R13_6" BEL "CPU_map/Register_map/R13_5" BEL
+        "CPU_map/Register_map/R13_4" BEL "CPU_map/Register_map/R13_3" BEL
+        "CPU_map/Register_map/R13_2" BEL "CPU_map/Register_map/R13_1" BEL
+        "CPU_map/Register_map/R13_0" BEL "CPU_map/Register_map/R0_15" BEL
+        "CPU_map/Register_map/R0_14" BEL "CPU_map/Register_map/R0_13" BEL
+        "CPU_map/Register_map/R0_12" BEL "CPU_map/Register_map/R0_11" BEL
+        "CPU_map/Register_map/R0_10" BEL "CPU_map/Register_map/R0_9" BEL
+        "CPU_map/Register_map/R0_8" BEL "CPU_map/Register_map/R0_7" BEL
+        "CPU_map/Register_map/R0_6" BEL "CPU_map/Register_map/R0_5" BEL
+        "CPU_map/Register_map/R0_4" BEL "CPU_map/Register_map/R0_3" BEL
+        "CPU_map/Register_map/R0_2" BEL "CPU_map/Register_map/R0_1" BEL
+        "CPU_map/Register_map/R0_0" BEL "CPU_map/Register_map/R11_15" BEL
+        "CPU_map/Register_map/R11_14" BEL "CPU_map/Register_map/R11_13" BEL
+        "CPU_map/Register_map/R11_12" BEL "CPU_map/Register_map/R11_11" BEL
+        "CPU_map/Register_map/R11_10" BEL "CPU_map/Register_map/R11_9" BEL
+        "CPU_map/Register_map/R11_8" BEL "CPU_map/Register_map/R11_7" BEL
+        "CPU_map/Register_map/R11_6" BEL "CPU_map/Register_map/R11_5" BEL
+        "CPU_map/Register_map/R11_4" BEL "CPU_map/Register_map/R11_3" BEL
+        "CPU_map/Register_map/R11_2" BEL "CPU_map/Register_map/R11_1" BEL
+        "CPU_map/Register_map/R11_0" BEL "CPU_map/Register_map/R10_15" BEL
+        "CPU_map/Register_map/R10_14" BEL "CPU_map/Register_map/R10_13" BEL
+        "CPU_map/Register_map/R10_12" BEL "CPU_map/Register_map/R10_11" BEL
+        "CPU_map/Register_map/R10_10" BEL "CPU_map/Register_map/R10_9" BEL
+        "CPU_map/Register_map/R10_8" BEL "CPU_map/Register_map/R10_7" BEL
+        "CPU_map/Register_map/R10_6" BEL "CPU_map/Register_map/R10_5" BEL
+        "CPU_map/Register_map/R10_4" BEL "CPU_map/Register_map/R10_3" BEL
+        "CPU_map/Register_map/R10_2" BEL "CPU_map/Register_map/R10_1" BEL
+        "CPU_map/Register_map/R10_0" BEL "CPU_map/Register_map/R12_15" BEL
+        "CPU_map/Register_map/R12_14" BEL "CPU_map/Register_map/R12_13" BEL
+        "CPU_map/Register_map/R12_12" BEL "CPU_map/Register_map/R12_11" BEL
+        "CPU_map/Register_map/R12_10" BEL "CPU_map/Register_map/R12_9" BEL
+        "CPU_map/Register_map/R12_8" BEL "CPU_map/Register_map/R12_7" BEL
+        "CPU_map/Register_map/R12_6" BEL "CPU_map/Register_map/R12_5" BEL
+        "CPU_map/Register_map/R12_4" BEL "CPU_map/Register_map/R12_3" BEL
+        "CPU_map/Register_map/R12_2" BEL "CPU_map/Register_map/R12_1" BEL
+        "CPU_map/Register_map/R12_0" BEL "CPU_map/Register_map/R9_15" BEL
+        "CPU_map/Register_map/R9_14" BEL "CPU_map/Register_map/R9_13" BEL
+        "CPU_map/Register_map/R9_12" BEL "CPU_map/Register_map/R9_11" BEL
+        "CPU_map/Register_map/R9_10" BEL "CPU_map/Register_map/R9_9" BEL
+        "CPU_map/Register_map/R9_8" BEL "CPU_map/Register_map/R9_7" BEL
+        "CPU_map/Register_map/R9_6" BEL "CPU_map/Register_map/R9_5" BEL
+        "CPU_map/Register_map/R9_4" BEL "CPU_map/Register_map/R9_3" BEL
+        "CPU_map/Register_map/R9_2" BEL "CPU_map/Register_map/R9_1" BEL
+        "CPU_map/Register_map/R9_0" BEL "CPU_map/Register_map/R8_15" BEL
+        "CPU_map/Register_map/R8_14" BEL "CPU_map/Register_map/R8_13" BEL
+        "CPU_map/Register_map/R8_12" BEL "CPU_map/Register_map/R8_11" BEL
+        "CPU_map/Register_map/R8_10" BEL "CPU_map/Register_map/R8_9" BEL
+        "CPU_map/Register_map/R8_8" BEL "CPU_map/Register_map/R8_7" BEL
+        "CPU_map/Register_map/R8_6" BEL "CPU_map/Register_map/R8_5" BEL
+        "CPU_map/Register_map/R8_4" BEL "CPU_map/Register_map/R8_3" BEL
+        "CPU_map/Register_map/R8_2" BEL "CPU_map/Register_map/R8_1" BEL
+        "CPU_map/Register_map/R8_0" BEL "CPU_map/Register_map/R6_15" BEL
+        "CPU_map/Register_map/R6_14" BEL "CPU_map/Register_map/R6_13" BEL
+        "CPU_map/Register_map/R6_12" BEL "CPU_map/Register_map/R6_11" BEL
+        "CPU_map/Register_map/R6_10" BEL "CPU_map/Register_map/R6_9" BEL
+        "CPU_map/Register_map/R6_8" BEL "CPU_map/Register_map/R6_7" BEL
+        "CPU_map/Register_map/R6_6" BEL "CPU_map/Register_map/R6_5" BEL
+        "CPU_map/Register_map/R6_4" BEL "CPU_map/Register_map/R6_3" BEL
+        "CPU_map/Register_map/R6_2" BEL "CPU_map/Register_map/R6_1" BEL
+        "CPU_map/Register_map/R6_0" BEL "CPU_map/Register_map/R5_15" BEL
+        "CPU_map/Register_map/R5_14" BEL "CPU_map/Register_map/R5_13" BEL
+        "CPU_map/Register_map/R5_12" BEL "CPU_map/Register_map/R5_11" BEL
+        "CPU_map/Register_map/R5_10" BEL "CPU_map/Register_map/R5_9" BEL
+        "CPU_map/Register_map/R5_8" BEL "CPU_map/Register_map/R5_7" BEL
+        "CPU_map/Register_map/R5_6" BEL "CPU_map/Register_map/R5_5" BEL
+        "CPU_map/Register_map/R5_4" BEL "CPU_map/Register_map/R5_3" BEL
+        "CPU_map/Register_map/R5_2" BEL "CPU_map/Register_map/R5_1" BEL
+        "CPU_map/Register_map/R5_0" BEL "CPU_map/Register_map/R7_15" BEL
+        "CPU_map/Register_map/R7_14" BEL "CPU_map/Register_map/R7_13" BEL
+        "CPU_map/Register_map/R7_12" BEL "CPU_map/Register_map/R7_11" BEL
+        "CPU_map/Register_map/R7_10" BEL "CPU_map/Register_map/R7_9" BEL
+        "CPU_map/Register_map/R7_8" BEL "CPU_map/Register_map/R7_7" BEL
+        "CPU_map/Register_map/R7_6" BEL "CPU_map/Register_map/R7_5" BEL
+        "CPU_map/Register_map/R7_4" BEL "CPU_map/Register_map/R7_3" BEL
+        "CPU_map/Register_map/R7_2" BEL "CPU_map/Register_map/R7_1" BEL
+        "CPU_map/Register_map/R7_0" BEL "CPU_map/Register_map/R3_15" BEL
+        "CPU_map/Register_map/R3_14" BEL "CPU_map/Register_map/R3_13" BEL
+        "CPU_map/Register_map/R3_12" BEL "CPU_map/Register_map/R3_11" BEL
+        "CPU_map/Register_map/R3_10" BEL "CPU_map/Register_map/R3_9" BEL
+        "CPU_map/Register_map/R3_8" BEL "CPU_map/Register_map/R3_7" BEL
+        "CPU_map/Register_map/R3_6" BEL "CPU_map/Register_map/R3_5" BEL
+        "CPU_map/Register_map/R3_4" BEL "CPU_map/Register_map/R3_3" BEL
+        "CPU_map/Register_map/R3_2" BEL "CPU_map/Register_map/R3_1" BEL
+        "CPU_map/Register_map/R3_0" BEL "CPU_map/Register_map/R2_15" BEL
+        "CPU_map/Register_map/R2_14" BEL "CPU_map/Register_map/R2_13" BEL
+        "CPU_map/Register_map/R2_12" BEL "CPU_map/Register_map/R2_11" BEL
+        "CPU_map/Register_map/R2_10" BEL "CPU_map/Register_map/R2_9" BEL
+        "CPU_map/Register_map/R2_8" BEL "CPU_map/Register_map/R2_7" BEL
+        "CPU_map/Register_map/R2_6" BEL "CPU_map/Register_map/R2_5" BEL
+        "CPU_map/Register_map/R2_4" BEL "CPU_map/Register_map/R2_3" BEL
+        "CPU_map/Register_map/R2_2" BEL "CPU_map/Register_map/R2_1" BEL
+        "CPU_map/Register_map/R2_0" BEL "CPU_map/Register_map/R4_15" BEL
+        "CPU_map/Register_map/R4_14" BEL "CPU_map/Register_map/R4_13" BEL
+        "CPU_map/Register_map/R4_12" BEL "CPU_map/Register_map/R4_11" BEL
+        "CPU_map/Register_map/R4_10" BEL "CPU_map/Register_map/R4_9" BEL
+        "CPU_map/Register_map/R4_8" BEL "CPU_map/Register_map/R4_7" BEL
+        "CPU_map/Register_map/R4_6" BEL "CPU_map/Register_map/R4_5" BEL
+        "CPU_map/Register_map/R4_4" BEL "CPU_map/Register_map/R4_3" BEL
+        "CPU_map/Register_map/R4_2" BEL "CPU_map/Register_map/R4_1" BEL
+        "CPU_map/Register_map/R4_0" BEL "CPU_map/Register_map/R1_15" BEL
+        "CPU_map/Register_map/R1_14" BEL "CPU_map/Register_map/R1_13" BEL
+        "CPU_map/Register_map/R1_12" BEL "CPU_map/Register_map/R1_11" BEL
+        "CPU_map/Register_map/R1_10" BEL "CPU_map/Register_map/R1_9" BEL
+        "CPU_map/Register_map/R1_8" BEL "CPU_map/Register_map/R1_7" BEL
+        "CPU_map/Register_map/R1_6" BEL "CPU_map/Register_map/R1_5" BEL
+        "CPU_map/Register_map/R1_4" BEL "CPU_map/Register_map/R1_3" BEL
+        "CPU_map/Register_map/R1_2" BEL "CPU_map/Register_map/R1_1" BEL
+        "CPU_map/Register_map/R1_0" BEL "CPU_map/KBD_ENC_map/PS2BitCounter_3"
+        BEL "CPU_map/KBD_ENC_map/PS2BitCounter_2" BEL
+        "CPU_map/KBD_ENC_map/PS2BitCounter_1" BEL
+        "CPU_map/KBD_ENC_map/PS2BitCounter_0" BEL
+        "CPU_map/KBD_ENC_map/PS2state_FSM_FFd2" BEL
+        "CPU_map/KBD_ENC_map/PS2state_FSM_FFd3" BEL
+        "CPU_map/KBD_ENC_map/PS2state_FSM_FFd1" BEL
+        "CPU_map/KBD_ENC_map/PS2Data_sr_10" BEL
+        "CPU_map/KBD_ENC_map/PS2Data_sr_9" BEL
+        "CPU_map/KBD_ENC_map/PS2Data_sr_8" BEL
+        "CPU_map/KBD_ENC_map/PS2Data_sr_7" BEL
+        "CPU_map/KBD_ENC_map/PS2Data_sr_6" BEL
+        "CPU_map/KBD_ENC_map/PS2Data_sr_5" BEL
+        "CPU_map/KBD_ENC_map/PS2Data_sr_4" BEL
+        "CPU_map/KBD_ENC_map/PS2Data_sr_3" BEL
+        "CPU_map/KBD_ENC_map/PS2Data_sr_2" BEL
+        "CPU_map/KBD_ENC_map/PS2Data_sr_1" BEL "CPU_map/KBD_ENC_map/PS2Clk_Q1"
+        BEL "CPU_map/KBD_ENC_map/done_flag" BEL "CPU_map/KBD_ENC_map/PS2Clk"
+        BEL "CPU_map/KBD_ENC_map/PS2Data" BEL "CPU_map/KBD_ENC_map/PS2Clk_Q2"
+        BEL "CPU_map/bootloader_map/bootloader_uart_map/sp_clock_9" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/sp_clock_8" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/sp_clock_7" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/sp_clock_6" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/sp_clock_5" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/sp_clock_4" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/sp_clock_3" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/sp_clock_2" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/sp_clock_1" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/sp_clock_0" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/lp_count_3" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/lp_count_2" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/lp_count_1" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/lp_count_0" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/sreg_9" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/sreg_8" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/sreg_7" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/sreg_6" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/sreg_5" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/sreg_4" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/sreg_3" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/sreg_2" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/sreg_1" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/rx2" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/rx1" BEL
+        "VGAM_map/Ypixel_9" BEL "VGAM_map/Ypixel_8" BEL "VGAM_map/Ypixel_7"
+        BEL "VGAM_map/Ypixel_6" BEL "VGAM_map/Ypixel_5" BEL
+        "VGAM_map/Ypixel_4" BEL "VGAM_map/Ypixel_3" BEL "VGAM_map/Ypixel_2"
+        BEL "VGAM_map/Ypixel_1" BEL "VGAM_map/Ypixel_0" BEL
+        "VGAM_map/Xpixel_9" BEL "VGAM_map/Xpixel_8" BEL "VGAM_map/Xpixel_7"
+        BEL "VGAM_map/Xpixel_6" BEL "VGAM_map/Xpixel_5" BEL
+        "VGAM_map/Xpixel_4" BEL "VGAM_map/Xpixel_3" BEL "VGAM_map/Xpixel_2"
+        BEL "VGAM_map/Xpixel_1" BEL "VGAM_map/Xpixel_0" BEL
+        "VGAM_map/ClkDiv_1" BEL "VGAM_map/ClkDiv_0" BEL "VGAM_map/Ypipe2_9"
+        BEL "VGAM_map/Ypipe2_8" BEL "VGAM_map/Ypipe2_7" BEL
+        "VGAM_map/Ypipe2_6" BEL "VGAM_map/Ypipe2_5" BEL "VGAM_map/Ypipe2_4"
+        BEL "VGAM_map/Ypipe2_3" BEL "VGAM_map/Ypipe2_2" BEL
+        "VGAM_map/Ypipe2_1" BEL "VGAM_map/Xpipe2_9" BEL "VGAM_map/Xpipe2_8"
+        BEL "VGAM_map/Xpipe2_7" BEL "VGAM_map/Xpipe2_6" BEL
+        "VGAM_map/Xpipe2_5" BEL "VGAM_map/Xpipe2_4" BEL "VGAM_map/blank2" BEL
+        "VGAM_map/Ypipe1_9" BEL "VGAM_map/Ypipe1_8" BEL "VGAM_map/Ypipe1_7"
+        BEL "VGAM_map/Ypipe1_6" BEL "VGAM_map/Ypipe1_5" BEL
+        "VGAM_map/Ypipe1_4" BEL "VGAM_map/Ypipe1_3" BEL "VGAM_map/Ypipe1_2"
+        BEL "VGAM_map/Ypipe1_1" BEL "VGAM_map/Xpipe1_9" BEL
+        "VGAM_map/Xpipe1_8" BEL "VGAM_map/Xpipe1_7" BEL "VGAM_map/Xpipe1_6"
+        BEL "VGAM_map/Xpipe1_5" BEL "VGAM_map/Xpipe1_4" BEL
+        "VGAM_map/Xpipe1_3" BEL "VGAM_map/Xpipe1_2" BEL "VGAM_map/blank1" BEL
+        "CPU_map/k_flag" BEL "CPU_map/halted" BEL
+        "CPU_map/bootloader_map/booting" BEL "CPU_map/bootloader_map/we" BEL
+        "CPU_map/KBD_ENC_map/shift_flag" BEL
+        "CPU_map/bootloader_map/bootloader_uart_map/isInput" BEL
+        "CPU_map/IR2_15_1" BEL "CPU_map/IR2_14_1" BEL "clk_BUFGP/BUFG" PIN
+        "PICT_MEM_map/Mram_pict_mem_pins<20>" PIN
+        "PICT_MEM_map/Mram_pict_mem_pins<21>" PIN "DM_map/Mram_dm1_pins<11>"
+        PIN "DM_map/Mram_dm2_pins<11>" PIN
+        "CPU_map/PM_map/Mram_pm_data2_pins<22>" PIN
+        "CPU_map/PM_map/Mram_pm_data2_pins<23>" PIN
+        "CPU_map/PM_map/Mram_pm_data1_pins<22>" PIN
+        "CPU_map/PM_map/Mram_pm_data1_pins<23>" PIN
+        "TILE_MEM_map/Mram_tile_memory_pins<11>";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+
